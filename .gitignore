@@ -1,0 +1,40 @@
+# Environment files
+.env
+*.env
+
+# Sensitive configuration
+configs/.env
+
+# Logs
+*.log
+logs/
+~/Library/Logs/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE settings
+.vscode/
+.idea/
+
+# Compiled files
+*.compiled
+*.class
+
+# Backup files
+*.bak
+*.swp
+*~

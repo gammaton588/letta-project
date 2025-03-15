@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  letta-server:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8284:8283"
+    volumes:
+      - letta-memories:/data/memories
+      - ./configs/.env:/app/.env
+    environment:
+      - LETTA_HOST=0.0.0.0
+      - LETTA_PORT=8283
+      - LETTA_MEMORY_DIR=/data/memories
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+
+volumes:
+  letta-memories:
+    driver: local
